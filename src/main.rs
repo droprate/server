@@ -1,3 +1,9 @@
+mod buffer;
+
+use buffer::{Buffer, StaticBuffer};
+
 fn main() {
-    println!("Hello, world!");
+    let mut buf: StaticBuffer<i32> = StaticBuffer::new();
+    buf.add(1).unwrap();
+    buf.consume();
 }
